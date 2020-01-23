@@ -1,0 +1,170 @@
+<h2 mat-dialog-title>Update Drive Details</h2>
+<mat-dialog-content class="mat-typography">
+
+    <form [formGroup]="driveUpdateForm">
+        <table>
+          <tr>
+            <td>
+         
+           <mat-form-field appearance="standard">
+             <mat-label>Enter Company Name</mat-label>
+             <input matInput formControlName="companyName" placeholder="Company Name" [(ngModel)]="data.companyName">
+           </mat-form-field>
+         
+             </td> 
+             <td>
+        
+           <mat-form-field appearance="standard">
+             <mat-label>Enter No OF Resources</mat-label>
+             <input matInput formControlName="resourcesNo" placeholder="Number of Resources required" [(ngModel)]="data.resourcesNo">
+            
+           </mat-form-field>
+         
+             </td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td>
+             
+         <mat-form-field>
+           <mat-select formControlName="experienceReq" placeholder="Required Experience" [(ngModel)]="experienceReqd">
+             <mat-option value="0">No Experience </mat-option>
+             <mat-option value="1">0-3 Months</mat-option>
+             <mat-option value="2">3-6 Months</mat-option>
+             <mat-option value="3">6 + Months</mat-option>
+             <mat-option value="4">Other</mat-option>
+             
+           </mat-select>
+          
+         </mat-form-field>
+         
+       </td>
+        <td>
+         
+           <mat-form-field appearance="standard">
+             <mat-label>Enter CTC Offered</mat-label>
+             <input matInput formControlName="ctcOffer" placeholder="CTC Offered" [(ngModel)]="data.ctcOffer">
+            
+           </mat-form-field>
+        
+       </td> 
+       <td>
+         
+         <mat-form-field>
+           <mat-select formControlName="joinCriterion" placeholder="Select Joining Criterion" [(ngModel)]="''+data.joinCriterion">
+             <mat-option value="0">No Training Direct Joining with Given CTC  </mat-option>
+             <mat-option value="1">3 Months Internship and then Joining</mat-option>
+           </mat-select>
+         </mat-form-field>
+       
+       </td>
+       </tr>
+       <p>
+           <mat-form-field   appearance="standard">
+             <mat-label>Enter Bond In Years</mat-label>
+             <input matInput formControlName="bondYrs" placeholder="Bond in years" [(ngModel)]="data.bondYrs">
+            
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field>
+             <mat-select  formControlName="positionDesc" placeholder="Select Position" [(ngModel)]="''+data.positionDesc">
+               <mat-option value="0">Full Stack Developer</mat-option>
+               <mat-option value="1">UI Developer</mat-option>
+               <mat-option value="2">MiddleWare and Backend </mat-option>
+               <mat-option value="3">Softwere Tester</mat-option>
+             </mat-select>
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field class="example-full-width">
+               <input matInput formControlName="dateFollowup" [matDatepicker]="picker" placeholder="Choose a FollowUp date" [(ngModel)]="''+data.dateFollowup">
+               <mat-datepicker-toggle matSuffix [for]="picker">
+                 <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+               </mat-datepicker-toggle>
+               <mat-datepicker #picker></mat-datepicker>
+             </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field>
+             <mat-select formControlName="educationCtr" placeholder="Education Criterion" [(ngModel)]="''+data.educationCtr">
+               <mat-option value="0">BE/Computer/IT</mat-option>
+               <mat-option value="1">BCA/MCA</mat-option>
+               <mat-option value="2">Others</mat-option>
+             </mat-select>
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field>
+             <mat-select formControlName="currentStats" placeholder="Select Current Status" [(ngModel)]="''+data.currentStats">
+               <mat-option value="0">Created</mat-option>
+               <mat-option value="1">Resume Sent</mat-option>
+               <mat-option value="2">Apti Done</mat-option>
+               <mat-option value="3">Assignment Done</mat-option>
+               <mat-option value="4">F2F/HR Done</mat-option>
+               <mat-option value="5">Completed</mat-option>
+             </mat-select>
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field>
+             <mat-select formControlName="nxtAction" placeholder="Select Next Action" [(ngModel)]="''+data.nxtAction">
+               <mat-option value="0">Resume Sent</mat-option>
+               <mat-option value="1">Apti Done</mat-option>
+               <mat-option value="2">Assignment Done</mat-option>
+               <mat-option value="3">F2F/HR Done</mat-option>
+               <mat-option value="4">Completed</mat-option>
+             </mat-select>
+           </mat-form-field>
+         </p>
+       
+         <p>
+           <mat-form-field class="example-full-width">
+               <input matInput formControlName="dtNxtAction"[matDatepicker]="picker11" placeholder="Choose a Next Action date" [(ngModel)]="''+data.dtNxtAction">
+               <mat-datepicker-toggle matSuffix [for]="picker11">
+                 <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+               </mat-datepicker-toggle>
+               <mat-datepicker #picker11></mat-datepicker>
+             </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field appearance="standard">
+             <mat-label>Required Passing Year</mat-label>
+             <input matInput formControlName="reqPassYr" placeholder="Passing Year Required" [(ngModel)]="data.reqPassYr">
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field>
+             <mat-select formControlName="reqGap" placeholder="Gap Required ?" [(ngModel)]="''+data.reqGap">
+               <mat-option value="0">No</mat-option>
+               <mat-option value="1">Yes</mat-option>
+             </mat-select>
+           </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field  class="example-full-width">
+               <input matInput formControlName="dtDrivCreation" [matDatepicker]="DriveCreationpicker" placeholder="Choose Drive Creation date" [(ngModel)]="''+data.dtDrivCreation">
+               <mat-datepicker-toggle matSuffix [for]="DriveCreationpicker">
+                 <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+               </mat-datepicker-toggle>
+               <mat-datepicker #DriveCreationpicker></mat-datepicker>
+             </mat-form-field>
+         </p>
+         <p>
+           <mat-form-field appearance="standard">
+             <mat-label>Enter TPO ID</mat-label>
+             <input formControlName="idTpo" matInput placeholder="TPO ID" [(ngModel)]="data.idTpo">
+            
+           </mat-form-field>
+         </p>
+         
+        </table>
+       </form>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="updateData()">Update</button>
+</mat-dialog-actions>
+
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

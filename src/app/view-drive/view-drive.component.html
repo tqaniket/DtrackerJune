@@ -1,0 +1,47 @@
+
+
+<table class="table table-bordered">
+    <tr >
+    <th>Company Name</th>
+    <th>Resources Required</th>
+    <th>Ecperience Required</th>
+    <th>CTC Offered</th>
+    <th>Join Criterion</th>
+    <th>Bond Years</th>
+    <th>Position</th>
+    <th>Followup Date</th>
+    <th>Education Criterion</th>
+    <th>Current Status</th>
+    <th>Next Action</th>
+    <th>Next Action Date</th>
+    <th>Passing Year Required</th>
+    <th>Gap Required</th>
+    <th>Creation Date</th>
+    <th>TPO Id </th>
+    <th>Action</th>
+</tr>
+<tr *ngFor="let e of drivearr;let i=index">
+<td>{{e.companyName}}</td>
+<td>{{e.resourcesNo}}</td>
+<td>{{e.experienceReq |experience}}</td>
+<td>{{e.ctcOffer}}</td>
+<td>{{e.joinCriterion |joinCriterion}}</td>
+<td>{{e.bondYrs}}</td>
+<td>{{e.positionDesc |position}}</td>
+<td>{{e.dateFollowup}}</td>
+<td>{{e.educationCtr | educationcriterion}}</td>
+<td>{{e.currentStats |currentstatus}}</td>
+<td>{{e.nxtAction |nxtAction}}</td>
+<td>{{e.dtNxtAction}}</td>
+<td>{{e.reqPassYr}}</td>
+<td>{{e.reqGap |gapRequired}}</td>
+<td>{{e.dtDrivCreation}}</td>
+<td>{{e.idTpo}}</td>
+<td>
+    <input type="button" value="Edit" (click)="Editdrive(i)" class="btn btn-success">
+    <input type="button" value="Delete" (click)="deleteDrive(i)"class="btn btn-danger">
+</td>
+</tr>
+
+</table>
+
